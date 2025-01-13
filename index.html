@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lyneymeow's World</title>
+    <style>
+        body {
+            font-family: 'Cursive', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFD1DC;
+            color: #d147a3;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .character-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff0f5;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+        }
+
+        .character-name {
+            font-size: 1.5em;
+            color: #ff1493;
+            margin-bottom: 10px;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 2em;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 20%;
+            top: -10px;
+        }
+        .heart:nth-child(2) {
+            right: 20%;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to Lyneymeow's World!
+    </header>
+
+    <main>
+        <section>
+            <h2>Meet Lyneymeow!</h2>
+            <div class="character-container">
+                <span class="heart">❤</span>
+                <span class="heart">❤</span>
+                <p class="character-name">Lyneymeow</p>
+                <img src="Lyney-removebg-preview.png" alt="Lyneymeow" style="border-radius: 50%; width: 150px; height: 150px; cursor: pointer;" id="lyneyImage">
+                <div class="audio-container">
+                    <p>Click Lyneymeow to hear him speak!</p>
+                    <audio id="lyneyAudio">
+                        <source src="lyney-tts-file.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Beautiful Image</h2>
+            <div class="image-container">
+                <img src="https://via.placeholder.com/600x400" alt="Placeholder Image" style="max-width: 100%; height: auto;">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lyneymeow's World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const lyneyImage = document.getElementById('lyneyImage');
+        const lyneyAudio = document.getElementById('lyneyAudio');
+
+        lyneyImage.addEventListener('click', () => {
+            lyneyAudio.play();
+        });
+    </script>
+</body>
+</html>
